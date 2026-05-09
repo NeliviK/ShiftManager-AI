@@ -1,0 +1,8 @@
+<service>
+  <id>BabkaBot</id>
+  <name>BabkaBot</name>
+  <description>Babka Shift Management Bot</description>
+  <executable>C:\Users\Administrator\AppData\Local\Apps\babka\venv\Scripts\python.exe</executable>
+  <arguments>main.py</arguments>
+  <log mode="roll"></log>
+</service>
