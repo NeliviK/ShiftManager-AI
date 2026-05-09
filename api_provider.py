@@ -4,16 +4,16 @@ import os
 import aiohttp
 from datetime import datetime
 
-# Универсальные настройки API из .env
+
 API_KEY = os.getenv("API_KEY", "")
 BASE_URL = os.getenv("API_BASE_URL", "")
 
-# Глобальный кэш аккаунтов
+
 accounts_cache = {}
 
 def _make_api_session() -> aiohttp.ClientSession:
     connector = aiohttp.TCPConnector(ssl=False)
-    # Используем кастомный хедер авторизации платформы
+   
     headers = {"x-om-auth-token": API_KEY, "Accept": "application/json"}
     return aiohttp.ClientSession(connector=connector, headers=headers)
 
@@ -42,7 +42,7 @@ async def load_accounts():
 async def api_get_transactions(platform_account_id: str, start_utc: datetime, end_utc: datetime) -> list[dict]:
     start_str = start_utc.strftime("%Y-%m-%dT%H:%M:%S.000Z")
     end_str   = end_utc.strftime("%Y-%m-%dT%H:%M:%S.000Z")
-    # Endpoint получения транзакций
+    
     url = f"{BASE_URL}/api/v0/platforms/onlyfans/accounts/{platform_account_id}/transactions"
     params = {"start": start_str, "end": end_str, "limit": 1000}
     try:
