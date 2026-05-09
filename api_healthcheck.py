@@ -5,7 +5,7 @@ import ssl
 import os
 from dotenv import load_dotenv
 
-# Загружаем переменные из .env
+
 load_dotenv()
 API_KEY = os.getenv("API_KEY", "")
 BASE_URL = os.getenv("API_BASE_URL", "https://omapi.onlymonster.ai")
@@ -34,7 +34,7 @@ def fetch_data(endpoint, params=None):
 
 def test_api():
     if not API_KEY:
-        print("⚠️ Ошибка: API_KEY не найден в файле .env!")
+        print("⚠️ API_KEY not found .env!")
         return
 
     print("🔄 1. Checking /api/v0/accounts ...")
