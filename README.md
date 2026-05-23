@@ -15,8 +15,9 @@ Built specifically for digital agencies, media buying teams, and remote content 
 <img width="1110" height="243" alt="Снимок экрана 2026-05-09 в 14 58 16" src="https://github.com/user-attachments/assets/ff41a3ac-85f7-44f7-8caa-47341b4dd90b" />
 
 **3. Automated API-Driven Financial Reporting** Cross-platform profit aggregation in action. The system fetches raw transaction data from external APIs, calculates the net shift profit across multiple accounts, and persists the record to the SQLite database.
-Note: The screenshots below showcase the live production environment, which is currently localized for the CIS market. 
-<img width="330" height="197" alt="image" src="https://github.com/user-attachments/assets/73d33a30-5a9c-4776-853a-4fbb29473b43" />
+<img width="512" height="351" alt="Screenshot_1" src="https://github.com/user-attachments/assets/c703a1c1-11ea-4fcb-be15-b4c61859ec64" />
+
+
 
 
 * **Automated Profit Tracking (API):** Direct asynchronous integration with platform APIs (via `aiohttp`) to calculate exact net profit generated during an employee's work shift.
